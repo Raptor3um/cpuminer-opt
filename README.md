@@ -66,6 +66,7 @@ Supported Algorithms
                           dmd-gr        Diamond-Groestl
                           drop          Dropcoin
                           fresh         Fresh
+                          GhostRider    Raptoreum
                           groestl       Groestl coin
                           heavy         Heavy
                           hex           x16r-hex
