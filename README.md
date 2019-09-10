@@ -7,6 +7,40 @@ All of the code is believed to be open and free. If anyone has a
 claim to any of it post your case in the cpuminer-opt Bitcoin Talk forum
 or by email.
 
+This fork supports the GhostRider algorithm developed and used by Raptoreum.
+https://raptoreum.com/rtm_files/papers/
+
+## Windows ##
+
+A complete list of commands is available with ./cpuminer --help. Unpack the files > hold shift > right click > open Powershell > issue command.
+
+There is a README included in the release, check this for which version of the miner to run.
+
+In Windows the miner is run by command or more easily the included .bat files. Open the .bat in a text editor and add a line like:
+```
+./cpuminer -a gr -o stratum+tcp://pool.raptoreum.com:3333 -u RNB21thMUhqxA4mWSqxSK5qQg9LVPThNCg -t 1
+```
+
+-t is the number of threads
+-a is the algo
+-u Use your Raptoreum address
+
+## Linux ##
+
+A complete list of commands is available with ./cpuminer --help. Running the miner is done like:
+```
+./cpuminer -a gr -o stratum+tcp://pool.raptoreum.com:3333 -u RNB21thMUhqxA4mWSqxSK5qQg9LVPThNCg -t 1
+```
+
+Note: You may need to make the cpuminer file executeable before running.
+```
+chmod +x cpuminer
+```
+Our supplied release for Linux is not a static build so you may run into an error where it complains about a missing lib. If so please let us know on Discord or Telegram and we can get you a working binary.
+
+# NOTE #
+This fork source is not same as our released binaries, DO NOT bother building from source, it will not work with our GhostRider (GR) algorithm. Reason for this as we are keeping GR specific code private until mainnet launch.
+
 Miner programs are often flagged as malware by antivirus programs. This is
 a false positive, they are flagged simply because they are cryptocurrency 
 miners. The source code is open for anyone to inspect. If you don't trust 
